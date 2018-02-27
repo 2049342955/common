@@ -43,49 +43,49 @@ public class BaseDomain implements Serializable {
     public static final Integer DEFALUT_PAGE_SIZE = 100;
 
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select REPLACE(uuid(),'-','')")
-    private String id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select REPLACE(uuid(),'-','')")
+//    private String id;
 
-    /**
-     * <pre>
-     *
-     * 表字段 : ciip_org_wf_approved_his.creation_date
-     * </pre>
-     */
-    private Date creationDate;
-
-    /**
-     * <pre>
-     *
-     * 表字段 : ciip_org_wf_approved_his.created_by
-     * </pre>
-     */
-    private String createdBy;
-
-    /**
-     * <pre>
-     *
-     * 表字段 : ciip_org_wf_approved_his.last_update_date
-     * </pre>
-     */
-    private Date lastUpdateDate;
-
-    /**
-     * <pre>
-     *
-     * 表字段 : ciip_org_wf_approved_his.last_updated_by
-     * </pre>
-     */
-    private String lastUpdatedBy;
-
-    /**
-     * <pre>
-     *
-     * 表字段 : ciip_org_wf_approved_his.last_updated_login
-     * </pre>
-     */
-    private String lastUpdatedLogin;
+//    /**
+//     * <pre>
+//     *
+//     * 表字段 : ciip_org_wf_approved_his.creation_date
+//     * </pre>
+//     */
+//    private Date creationDate;
+//
+//    /**
+//     * <pre>
+//     *
+//     * 表字段 : ciip_org_wf_approved_his.created_by
+//     * </pre>
+//     */
+//    private String createdBy;
+//
+//    /**
+//     * <pre>
+//     *
+//     * 表字段 : ciip_org_wf_approved_his.last_update_date
+//     * </pre>
+//     */
+//    private Date lastUpdateDate;
+//
+//    /**
+//     * <pre>
+//     *
+//     * 表字段 : ciip_org_wf_approved_his.last_updated_by
+//     * </pre>
+//     */
+//    private String lastUpdatedBy;
+//
+//    /**
+//     * <pre>
+//     *
+//     * 表字段 : ciip_org_wf_approved_his.last_updated_login
+//     * </pre>
+//     */
+//    private String lastUpdatedLogin;
 
     /**
      * <pre>
@@ -96,55 +96,55 @@ public class BaseDomain implements Serializable {
     private Integer versions;
 
 
-    public String getId() {
-        return id;
-    }
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    public Date getLastUpdateDate() {
-        return lastUpdateDate;
-    }
-
-    public void setLastUpdateDate(Date lastUpdateDate) {
-        this.lastUpdateDate = lastUpdateDate;
-    }
-
-    public String getLastUpdatedBy() {
-        return lastUpdatedBy;
-    }
-
-    public void setLastUpdatedBy(String lastUpdatedBy) {
-        this.lastUpdatedBy = lastUpdatedBy;
-    }
-
-    public String getLastUpdatedLogin() {
-        return lastUpdatedLogin;
-    }
-
-    public void setLastUpdatedLogin(String lastUpdatedLogin) {
-        this.lastUpdatedLogin = lastUpdatedLogin;
-    }
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    public Date getCreationDate() {
+//        return creationDate;
+//    }
+//
+//    public void setCreationDate(Date creationDate) {
+//        this.creationDate = creationDate;
+//    }
+//
+//    public String getCreatedBy() {
+//        return createdBy;
+//    }
+//
+//    public void setCreatedBy(String createdBy) {
+//        this.createdBy = createdBy;
+//    }
+//
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    public Date getLastUpdateDate() {
+//        return lastUpdateDate;
+//    }
+//
+//    public void setLastUpdateDate(Date lastUpdateDate) {
+//        this.lastUpdateDate = lastUpdateDate;
+//    }
+//
+//    public String getLastUpdatedBy() {
+//        return lastUpdatedBy;
+//    }
+//
+//    public void setLastUpdatedBy(String lastUpdatedBy) {
+//        this.lastUpdatedBy = lastUpdatedBy;
+//    }
+//
+//    public String getLastUpdatedLogin() {
+//        return lastUpdatedLogin;
+//    }
+//
+//    public void setLastUpdatedLogin(String lastUpdatedLogin) {
+//        this.lastUpdatedLogin = lastUpdatedLogin;
+//    }
 
     public Integer getVersions() {
         return versions;

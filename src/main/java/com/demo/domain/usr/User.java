@@ -9,7 +9,8 @@ import javax.persistence.Id;
 
 public class User extends BaseDomain {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY,generator = "select uuid()")
+	//@GeneratedValue(strategy = GenerationType.IDENTITY,generator = "select uuid()")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select REPLACE(uuid(),'-','')")
 	private String id;
 
 	private String name;

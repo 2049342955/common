@@ -1,5 +1,11 @@
+/*
+ * #{copyright}#
+ */
 package com.demo.common;
 
+/**
+ * @author chenjingxiong
+ */
 public class Constant {
 
     public static final String DELETED_FLAG_Y = "Y";
