@@ -6,7 +6,7 @@ package com.demo.common;
  * description :
  */
 public class ServiceNameConstant {
-    public static final String USER_SERVICE = "user-service";
+    public static final String USER_SERVICE = "graduation-user";
     public static final String MEU_SERVICE = "meu-service";
     public static final String ORG_SERVICE = "org-service";
     public static final String MDM_SERVICE = "mdm-service";

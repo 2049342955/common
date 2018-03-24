@@ -20,10 +20,6 @@ public class User extends BaseDomain {
 
 	private String password;
 
-	private String sex;
-
-	private Integer age;
-
 	private String email;
 
 	private String phone;
@@ -87,34 +83,6 @@ public class User extends BaseDomain {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	/**
-	 * @return sex
-	 */
-	public String getSex() {
-		return sex;
-	}
-
-	/**
-	 * @param sex
-	 */
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
-	/**
-	 * @return age
-	 */
-	public Integer getAge() {
-		return age;
-	}
-
-	/**
-	 * @param age
-	 */
-	public void setAge(Integer age) {
-		this.age = age;
 	}
 
 	/**
