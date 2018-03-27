@@ -20,6 +20,15 @@ public class User extends BaseDomain {
 
 	private String password;
 
+	private String college;
+
+	private String major;
+
+	private String address;
+
+	@Column(name = "startDate")
+	private Integer startdate;
+
 	private String email;
 
 	private String phone;
@@ -28,6 +37,8 @@ public class User extends BaseDomain {
 
 	@Column(name = "head_url")
 	private String headUrl;
+
+	private Integer versions;
 
 	/**
 	 * @return id
@@ -86,6 +97,62 @@ public class User extends BaseDomain {
 	}
 
 	/**
+	 * @return college
+	 */
+	public String getCollege() {
+		return college;
+	}
+
+	/**
+	 * @param college
+	 */
+	public void setCollege(String college) {
+		this.college = college;
+	}
+
+	/**
+	 * @return major
+	 */
+	public String getMajor() {
+		return major;
+	}
+
+	/**
+	 * @param major
+	 */
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	/**
+	 * @return address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	/**
+	 * @return startDate
+	 */
+	public Integer getStartdate() {
+		return startdate;
+	}
+
+	/**
+	 * @param startdate
+	 */
+	public void setStartdate(Integer startdate) {
+		this.startdate = startdate;
+	}
+
+	/**
 	 * @return email
 	 */
 	public String getEmail() {
@@ -139,5 +206,19 @@ public class User extends BaseDomain {
 	 */
 	public void setHeadUrl(String headUrl) {
 		this.headUrl = headUrl;
+	}
+
+	/**
+	 * @return versions
+	 */
+	public Integer getVersions() {
+		return versions;
+	}
+
+	/**
+	 * @param versions
+	 */
+	public void setVersions(Integer versions) {
+		this.versions = versions;
 	}
 }
