@@ -8,18 +8,18 @@ package com.demo.common;
  */
 public class CacheConstant {
     /**
-     * 门店cache
+     * 用户cache
      */
     public static final String USER_CACHE = "user_cache";
 
     /**
-     * 微信wx_refresh_token
+     * 学院
      */
-    public static final String WX_REFRESH_TOKEN = "wx_refresh_token";
+    public static final String COLLEGE_CACHE = "college_cache";
     /**
-     * 微信wx_js_api_ticket
+     * 专业
      */
-    public static final String WX_JS_API_TICKET = "wx_js_api_ticket";
+    public static final String MAJOR_CACHE = "major_cache";
     /**
      * 发送验证码之前 准备工作,防止被攻击
      */
