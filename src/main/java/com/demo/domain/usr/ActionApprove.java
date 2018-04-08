@@ -1,26 +1,28 @@
 package com.demo.domain.usr;
 
 import com.demo.domain.BaseDomain;
+import com.demo.utils.CustomDateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
+import java.util.Date;
 
-@Table(name = "user_roles")
-public class UserRoles extends BaseDomain {
+@Table(name = "action_approve")
+public class ActionApprove extends BaseDomain{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select REPLACE(uuid(),'-','')")
     private String id;
 
-    @Column(name = "user_id")
-    private String userId;
+    private String aid;
 
-    @Column(name = "role_id")
-    private String roleId;
-
-    private String cid;
+    @Column(name = "approve_date")
+    private Date approveDate;
 
     private String status;
 
     private String description;
+
+    private Integer versions;
 
     /**
      * @return id
@@ -37,39 +39,32 @@ public class UserRoles extends BaseDomain {
     }
 
     /**
-     * @return user_id
+     * @return aid
      */
-    public String getUserId() {
-        return userId;
+    public String getAid() {
+        return aid;
     }
 
     /**
-     * @param userId
+     * @param aid
      */
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setAid(String aid) {
+        this.aid = aid;
     }
 
     /**
-     * @return role_id
+     * @return approve_date
      */
-    public String getRoleId() {
-        return roleId;
+    @JsonSerialize(using = CustomDateSerializer.class)
+    public Date getApproveDate() {
+        return approveDate;
     }
 
     /**
-     * @param roleId
+     * @param approveDate
      */
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
-    }
-
-    public String getCid() {
-        return cid;
-    }
-
-    public void setCid(String cid) {
-        this.cid = cid;
+    public void setApproveDate(Date approveDate) {
+        this.approveDate = approveDate;
     }
 
     /**
@@ -98,5 +93,19 @@ public class UserRoles extends BaseDomain {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * @return versions
+     */
+    public Integer getVersions() {
+        return versions;
+    }
+
+    /**
+     * @param versions
+     */
+    public void setVersions(Integer versions) {
+        this.versions = versions;
     }
 }

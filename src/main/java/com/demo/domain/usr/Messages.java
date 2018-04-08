@@ -4,25 +4,25 @@ import com.demo.domain.BaseDomain;
 import com.demo.utils.CustomDateSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
-public class Notice extends BaseDomain {
+public class Messages extends BaseDomain{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select REPLACE(uuid(),'-','')")
     private String id;
 
-    private String title;
+    private String name;
 
     private String message;
 
-    @Column(name = "create_by")
-    private String createBy;
+    private String status;
 
     private Date date;
+
+    private Integer versions;
 
     /**
      * @return id
@@ -38,12 +38,18 @@ public class Notice extends BaseDomain {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    /**
+     * @return name
+     */
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    /**
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
@@ -61,31 +67,40 @@ public class Notice extends BaseDomain {
     }
 
     /**
-     * @return create_by
+     * @return status
      */
-    public String getCreateBy() {
-        return createBy;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * @param createBy
+     * @param status
      */
-    public void setCreateBy(String createBy) {
-        this.createBy = createBy;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    /**
-     * @return date
-     */
+
     @JsonSerialize(using = CustomDateSerializer.class)
     public Date getDate() {
         return date;
     }
 
-    /**
-     * @param date
-     */
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    /**
+     * @return versions
+     */
+    public Integer getVersions() {
+        return versions;
+    }
+
+    /**
+     * @param versions
+     */
+    public void setVersions(Integer versions) {
+        this.versions = versions;
     }
 }

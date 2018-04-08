@@ -21,6 +21,8 @@ public class Menu extends BaseDomain {
 
     private String url;
 
+    private String icon;
+
     @Column(name = "parent_id")
     private String parentId;
 
@@ -92,6 +94,15 @@ public class Menu extends BaseDomain {
      */
     public void setUrl(String url) {
         this.url = url;
+    }
+
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     /**

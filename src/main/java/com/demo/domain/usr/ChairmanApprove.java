@@ -3,24 +3,26 @@ package com.demo.domain.usr;
 import com.demo.domain.BaseDomain;
 
 import javax.persistence.*;
+import java.util.Date;
 
-@Table(name = "user_roles")
-public class UserRoles extends BaseDomain {
+@Table(name = "chairman_approve")
+public class ChairmanApprove extends BaseDomain{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select REPLACE(uuid(),'-','')")
     private String id;
 
-    @Column(name = "user_id")
-    private String userId;
-
-    @Column(name = "role_id")
-    private String roleId;
+    private String uid;
 
     private String cid;
 
-    private String status;
+    @Column(name = "approve_date")
+    private Date approveDate;
+
+    private Integer status;
 
     private String description;
+
+    private Integer versions;
 
     /**
      * @return id
@@ -37,32 +39,19 @@ public class UserRoles extends BaseDomain {
     }
 
     /**
-     * @return user_id
+     * @return uid
      */
-    public String getUserId() {
-        return userId;
+    public String getUid() {
+        return uid;
     }
 
     /**
-     * @param userId
+     * @param uid
      */
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
-    /**
-     * @return role_id
-     */
-    public String getRoleId() {
-        return roleId;
-    }
-
-    /**
-     * @param roleId
-     */
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
-    }
 
     public String getCid() {
         return cid;
@@ -73,16 +62,30 @@ public class UserRoles extends BaseDomain {
     }
 
     /**
+     * @return approve_date
+     */
+    public Date getApproveDate() {
+        return approveDate;
+    }
+
+    /**
+     * @param approveDate
+     */
+    public void setApproveDate(Date approveDate) {
+        this.approveDate = approveDate;
+    }
+
+    /**
      * @return status
      */
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
     /**
      * @param status
      */
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -98,5 +101,19 @@ public class UserRoles extends BaseDomain {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * @return versions
+     */
+    public Integer getVersions() {
+        return versions;
+    }
+
+    /**
+     * @param versions
+     */
+    public void setVersions(Integer versions) {
+        this.versions = versions;
     }
 }
